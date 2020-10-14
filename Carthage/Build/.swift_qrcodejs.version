@@ -1,0 +1,11 @@
+{
+  "commitish" : "1.1.4",
+  "iOS" : [
+    {
+      "hash" : "97bcc6dbc33abeaafbe89703c5b7fdd33d2121ce516e112dcea99d7060594837",
+      "name" : "swift_qrcodejs",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ]
+}

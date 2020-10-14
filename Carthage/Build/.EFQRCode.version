@@ -1,0 +1,11 @@
+{
+  "commitish" : "5.1.8",
+  "iOS" : [
+    {
+      "hash" : "abd0757a0924af5b9fd7fc91fca4060f7f9a6bfd0734bd5e28e4de27263331d2",
+      "name" : "EFQRCode",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ]
+}

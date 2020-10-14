@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbU-4i-WNJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--QRCoder-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GeneratorViewController" customModule="BarcodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-4s-jUi">
+                                <rect key="frame" x="103.5" y="239" width="207" height="204.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7dj-4s-jUi" secondAttribute="height" id="Qqd-4V-YJE"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="qrcode" catalog="system"/>
+                                <connections>
+                                    <action selector="setImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gds-0i-MMz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website link for QRCode" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-af-uLg">
+                                <rect key="frame" x="77.5" y="461" width="259" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9rd-on-FKq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq6-J6-bic">
+                                <rect key="frame" x="77.5" y="796" width="259" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7iU-h1-rZa"/>
+                                </constraints>
+                                <state key="normal" title="Create QRCode">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MXG-ZW-5rb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7dj-4s-jUi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Eyp-ZQ-ERF"/>
+                            <constraint firstItem="7dj-4s-jUi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oo7-T0-hKe"/>
+                            <constraint firstItem="Dq6-J6-bic" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RnP-RM-eH2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dq6-J6-bic" secondAttribute="bottom" constant="16" id="SZy-vY-IUZ"/>
+                            <constraint firstItem="7dj-4s-jUi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="WCk-cG-t68"/>
+                            <constraint firstItem="Dq6-J6-bic" firstAttribute="width" secondItem="bAR-af-uLg" secondAttribute="width" id="cgg-RY-gtj"/>
+                            <constraint firstItem="bAR-af-uLg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eDW-Bc-sFL"/>
+                            <constraint firstItem="bAR-af-uLg" firstAttribute="width" secondItem="7dj-4s-jUi" secondAttribute="width" multiplier="1.25" id="fkb-hM-NnL"/>
+                            <constraint firstItem="bAR-af-uLg" firstAttribute="top" secondItem="7dj-4s-jUi" secondAttribute="bottom" constant="16" id="m2m-DZ-e9m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QRCoder" id="sRj-IG-03Q">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="z0m-iL-nw6">
+                            <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="shareQRCode:" destination="BYZ-38-t0r" id="5zp-Eq-itJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="barcode.viewfinder" catalog="system" id="koA-4Y-dc2">
+                            <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="readQRCode:" destination="BYZ-38-t0r" id="e8q-pC-9lb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createQRCodeButton" destination="Dq6-J6-bic" id="Idt-ya-0PW"/>
+                        <outlet property="qrCodeButton" destination="7dj-4s-jUi" id="Rdc-Xs-n0K"/>
+                        <outlet property="readQRCodeButton" destination="koA-4Y-dc2" id="Y13-6y-0Em"/>
+                        <outlet property="shareQRCodeButton" destination="z0m-iL-nw6" id="Sgd-6P-bD9"/>
+                        <outlet property="urlTextField" destination="bAR-af-uLg" id="sVz-UX-vOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uPz-fO-j8Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbU-4i-WNJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="coP-bc-98n">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CRU-Xe-QGZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUv-sK-dyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barcode.viewfinder" catalog="system" width="128" height="114"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
