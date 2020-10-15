@@ -7,7 +7,7 @@
 - MVVM architecture
 - UIImagePicker
 - UIActivityViewController
-- Carthage: https://github.com/EFPrefix/EFQRCode
+- Framework imported using Carthage: https://github.com/EFPrefix/EFQRCode
 
 ## Images
 
