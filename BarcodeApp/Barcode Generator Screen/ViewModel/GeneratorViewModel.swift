@@ -51,7 +51,6 @@ class GeneratorViewModel {
         
         if let testImage = image?.cgImage,
             let tryCodes = EFQRCode.recognize(image: testImage) {
-            
             if !tryCodes.isEmpty {
                 return tryCodes[0]
             }

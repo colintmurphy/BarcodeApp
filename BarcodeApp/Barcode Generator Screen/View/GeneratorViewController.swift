@@ -30,7 +30,7 @@ class GeneratorViewController: UIViewController {
     
     // MARK: - Private Attributes
     
-    private var isReadingQRCode = false
+    private var imagePickerUse: ImagePickerUseCase = .selectImage
     
     // MARK: - View Life Cycles
 
@@ -64,13 +64,13 @@ class GeneratorViewController: UIViewController {
     
     @IBAction private func readQRCode(_ sender: Any) {
         
-        isReadingQRCode = true
+        imagePickerUse = .readImage
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             showImagePicker(with: .camera)
         } else {
             didFailWithError(.noCameraFound)
+            imagePickerUse = .selectImage
         }
-        isReadingQRCode = false
     }
     
     @IBAction private func shareQRCode(_ sender: Any) {
@@ -158,7 +158,6 @@ extension GeneratorViewController: UIImagePickerControllerDelegate, UINavigation
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
             cameraAction.isEnabled = false
         }
-        
         alert.addAction(photosAction)
         alert.addAction(cameraAction)
         alert.addAction(cancelAction)
@@ -168,9 +167,9 @@ extension GeneratorViewController: UIImagePickerControllerDelegate, UINavigation
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let editedImage = info[.editedImage] as? UIImage {
-            qrCodeButton.setBackgroundImage(editedImage, for: .normal)
+            handleReadOrSelectImage(with: editedImage)
         } else if let originalImage = info[.originalImage] as? UIImage {
-            qrCodeButton.setBackgroundImage(originalImage, for: .normal)
+            handleReadOrSelectImage(with: originalImage)
         } else {
             if #available(iOS 13.0, *) {
                 qrCodeButton.setBackgroundImage(UIImage(systemName: "qrcode")?.withTintColor(.systemPink), for: .normal)
@@ -179,11 +178,23 @@ extension GeneratorViewController: UIImagePickerControllerDelegate, UINavigation
             }
         }
         dismiss(animated: true)
+    }
+    
+    private func handleReadOrSelectImage(with image: UIImage) {
         
-        if isReadingQRCode {
-            if let urlString = viewModel.readQRCode(with: qrCodeButton.backgroundImage(for: .normal)) {
-                urlTextField.text = urlString
-            }
+        switch imagePickerUse {
+        case .selectImage:
+            qrCodeButton.setBackgroundImage(image, for: .normal)
+        case .readImage:
+            readQRCode(of: image)
         }
+    }
+    
+    private func readQRCode(of image: UIImage) {
+        
+        if let urlString = viewModel.readQRCode(with: image) {
+            urlTextField.text = urlString
+        }
+        imagePickerUse = .selectImage
     }
 }

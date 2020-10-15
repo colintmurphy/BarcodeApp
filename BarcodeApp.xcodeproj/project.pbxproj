@@ -17,6 +17,7 @@
 		2147EE7B2537386300B94FF7 /* EFQRCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2147EE792537386300B94FF7 /* EFQRCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2147EE7E2537387100B94FF7 /* swift_qrcodejs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2147EE7D2537387100B94FF7 /* swift_qrcodejs.framework */; };
 		2147EE7F2537387100B94FF7 /* swift_qrcodejs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2147EE7D2537387100B94FF7 /* swift_qrcodejs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		214E6C422537C7470053DC74 /* ImagePickerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E6C412537C7470053DC74 /* ImagePickerUseCase.swift */; };
 		2165E1412537463300A89A8E /* GeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2165E1402537463300A89A8E /* GeneratorViewModel.swift */; };
 		2165E14425374BC100A89A8E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2165E14325374BC100A89A8E /* UIViewController+Ext.swift */; };
 		2165E146253755E900A89A8E /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2165E145253755E900A89A8E /* ErrorType.swift */; };
@@ -50,6 +51,7 @@
 		2147EE782537383F00B94FF7 /* swift_qrcodejs.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = swift_qrcodejs.framework.dSYM; path = Carthage/Build/iOS/swift_qrcodejs.framework.dSYM; sourceTree = "<group>"; };
 		2147EE792537386300B94FF7 /* EFQRCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EFQRCode.framework; path = Carthage/Build/iOS/EFQRCode.framework; sourceTree = "<group>"; };
 		2147EE7D2537387100B94FF7 /* swift_qrcodejs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = swift_qrcodejs.framework; path = Carthage/Build/iOS/swift_qrcodejs.framework; sourceTree = "<group>"; };
+		214E6C412537C7470053DC74 /* ImagePickerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerUseCase.swift; sourceTree = "<group>"; };
 		2165E1402537463300A89A8E /* GeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewModel.swift; sourceTree = "<group>"; };
 		2165E14325374BC100A89A8E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		2165E145253755E900A89A8E /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2165E145253755E900A89A8E /* ErrorType.swift */,
+				214E6C412537C7470053DC74 /* ImagePickerUseCase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				2147EE5F253732F600B94FF7 /* AppDelegate.swift in Sources */,
 				2165E14425374BC100A89A8E /* UIViewController+Ext.swift in Sources */,
 				2165E1412537463300A89A8E /* GeneratorViewModel.swift in Sources */,
+				214E6C422537C7470053DC74 /* ImagePickerUseCase.swift in Sources */,
 				2165E146253755E900A89A8E /* ErrorType.swift in Sources */,
 				2147EE61253732F600B94FF7 /* SceneDelegate.swift in Sources */,
 			);
